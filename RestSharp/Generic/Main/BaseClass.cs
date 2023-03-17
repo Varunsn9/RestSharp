@@ -61,7 +61,7 @@ namespace RestSharp.Generic.Main
             //loginPage object initilization
             _loginPage = new LoginPage(driver);
             driver.Navigate().GoToUrl(_loginPage.url);
-
+            
         }
 
         [TestCleanup]

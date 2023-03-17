@@ -62,7 +62,6 @@ namespace RestSharp.Test.LoginPageTestClass
         [DataSource("System.Data.OleDb",
             "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IPathConstants.excelPath+ 
             ";Extended Properties=Excel 12.0","TITLE$", DataAccessMethod.Sequential)]
-        
         public void ExcelData()
         {
             Console.WriteLine(_TestContext.DataRow[0]);
