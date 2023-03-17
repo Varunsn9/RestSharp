@@ -33,7 +33,6 @@ namespace RestSharp.Test.LoginPageTestClass
             Assert.AreEqual(driver.Url, _homePage.url, "Url verification");
 
             Console.WriteLine(excel_Utility.ExcelData() );
-            
         }
 
         [TestMethod]
@@ -53,7 +52,6 @@ namespace RestSharp.Test.LoginPageTestClass
             //assertions
             Assert.AreEqual(driver.Title, _homePage.title, "Title is Not Matching");
             Assert.AreEqual(driver.Url, _homePage.url, "Url verification");
-
         }
         
         [TestMethod]
@@ -61,10 +59,16 @@ namespace RestSharp.Test.LoginPageTestClass
         [Owner("Varun")]
         [DataSource("System.Data.OleDb",
             "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IPathConstants.excelPath+ 
-            ";Extended Properties=Excel 12.0","TITLE$", DataAccessMethod.Sequential)]
+            ";Extended Properties=Excel 12.0","LOGIN$", DataAccessMethod.Sequential)]
         public void ExcelData()
         {
-            Console.WriteLine(_TestContext.DataRow[0]);
+            _loginPage = new LoginPage(driver);
+            //logining in 
+            _loginPage.Login(_TestContext.DataRow["USERNAME"].ToString(), _TestContext.DataRow["PASSWORD"].ToString());
+            //assertions
+            Assert.AreEqual(driver.Title, _TestContext.DataRow["HOMEPAGE_TITLE"], "Title is Not Matching");
+            Assert.AreEqual(driver.Url, _TestContext.DataRow["HOMEPAGE_URL"], "Url verification failed");
+
         }
     }
 
