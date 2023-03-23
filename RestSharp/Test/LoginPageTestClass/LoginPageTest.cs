@@ -36,7 +36,7 @@ namespace RestSharp.Test.LoginPageTestClass
             Console.WriteLine(excel_Utility.ExcelData());
         }
 
-        //[TestMethod]
+        [TestMethod]
         [TestCategory("Login"), TestCategory("Regression"), TestCategory("Smoke")]
         [Owner("Varun")]
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", IPathConstants.csvPath, "CsvData#csv", DataAccessMethod.Sequential)]
