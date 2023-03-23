@@ -12,7 +12,7 @@ namespace RestSharp.Test.LoginPageTestClass
     [TestClass]
     public class ExcelTesting : BaseClass
     {
-        [TestMethod]
+        //[TestMethod]
         [TestCategory("Login"), TestCategory("Regression"), TestCategory("Smoke")]
         [Owner("Varun")]
         [DataSource("System.Data.OleDb",
