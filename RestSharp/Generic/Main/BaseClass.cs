@@ -19,7 +19,7 @@ namespace RestSharp.Generic.Main
     {
 
         public static TestContext _TestContext;
-        protected IWebDriver driver;
+        public  IWebDriver driver;
         //declaring the LoginPage
         protected LoginPage _loginPage;
         public HomePage _homePage;
@@ -35,7 +35,7 @@ namespace RestSharp.Generic.Main
         [AssemblyInitialize]
         public static void AssemblyInitialize(TestContext testContext)
         {
-            _TestContext=testContext;
+           _TestContext=testContext;
             // Perform any necessary setup before the entire test assembly runs
             
             //MessageBox.Show("AssemblyInitialize");
@@ -50,10 +50,11 @@ namespace RestSharp.Generic.Main
             //MessageBox.Show("AssemblyCleanup");
         }
 
+
+
         [TestInitialize]
         public void TestInitialize()
         {
-            
             // Perform any necessary setup before each test method runs
             driver = new ChromeDriver();
             // adding waiting condition for find Elements and find Element
@@ -61,7 +62,6 @@ namespace RestSharp.Generic.Main
             //loginPage object initilization
             _loginPage = new LoginPage(driver);
             driver.Navigate().GoToUrl(_loginPage.url);
-            
         }
 
         [TestCleanup]
@@ -87,9 +87,6 @@ namespace RestSharp.Generic.Main
                 _TestContext.AddResultFile(screenshotFolder+ $"screenshot_{_TestContext.TestName}_{timestamp}.jpg");
             }
             driver.Quit();
-        
         }
-
     }
-   
 }
