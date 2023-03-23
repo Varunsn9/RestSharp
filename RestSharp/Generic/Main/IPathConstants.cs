@@ -8,7 +8,7 @@ namespace RestSharp.Generic.Main
 {
     public class IPathConstants
     {
-        public const string excelPath = @"D:\VisualStudioRepos\AzureDevOps\RestSharp\RestSharp\Main_Resources\VTiger.xlsx";
-        public const string csvPath = @"D:\VisualStudioRepos\AzureDevOps\RestSharp\RestSharp\Main_Resources\CsvData.csv";
+        public const string excelPath = @"RestSharp/Main_Resources/VTiger.xlsx";
+        public const string csvPath = @"RestSharp/Main_Resources/CsvData.csv";
     }
 }
