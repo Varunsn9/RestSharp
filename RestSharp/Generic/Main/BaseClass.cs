@@ -29,9 +29,6 @@ namespace RestSharp.Generic.Main
         public Excel_Utility excel_Utility=new Excel_Utility();
 
 
-
-
-
         [AssemblyInitialize]
         public static void AssemblyInitialize(TestContext testContext)
         {
