@@ -1,0 +1,10 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<RunSettings>
+	<!-- configuration elements -->
+	<!-- test parameters to fetch the or common data from runsetting file to the project-->>
+	<TestRunParameters>
+		<Parameter name="webAppUrl" value="http://localhost" />
+		<Parameter name="docsUrl" value="https://learn.microsoft.com" />
+	</TestRunParameters>
+</RunSettings>
+	
