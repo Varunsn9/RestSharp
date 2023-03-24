@@ -14,10 +14,10 @@ using System.Windows;
 
 namespace RestSharp.Generic.Main
 {
+
     [TestClass]
     public class BaseClass
     {
-
         public static TestContext _TestContext;
         public  IWebDriver driver;
         //declaring the LoginPage
@@ -27,7 +27,7 @@ namespace RestSharp.Generic.Main
         public CSharp_Utility cSharp_Utility=new CSharp_Utility();
         public WebDriver_Utility webDriver_Utility=new WebDriver_Utility();
         public Excel_Utility excel_Utility=new Excel_Utility();
-
+            
 
         [AssemblyInitialize]
         public static void AssemblyInitialize(TestContext testContext)
