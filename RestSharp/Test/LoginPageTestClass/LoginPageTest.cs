@@ -34,7 +34,7 @@ namespace RestSharp.Test.LoginPageTestClass
             Assert.AreEqual(driver.Title, _homePage.title, "Title is Not Matching");
             Assert.AreEqual(driver.Url, _homePage.url, "Url verification");
             Console.WriteLine(_TestContext.Properties["webAppUrl"]);
-            //Console.WriteLine(excel_Utility.ExcelData());
+            
             }
 
         [TestMethod]
